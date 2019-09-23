@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color=success>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-center color=dark>
+      <h1>
+        <img width=40 src="assets/icon/cerveja.jpg">
+        Lúpulo
+        <img width=40 src="assets/icon/cerveja.jpg"></h1>
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card padding>
+    <ion-card-title text-center>
+      Cadastrar Lúpulo
+    </ion-card-title>
+    <!-- <form (ngSubmit)="cadastrar()"> -->
+    <ion-list>
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" [(ngModel)]="model.nome" clear-input="true" text-capitalize></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Alpha %:</ion-label>
+        <ion-input type="number" [(ngModel)]="model.alpha" clear-input="true" placeholder="2 - 18"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Beta %:</ion-label>
+        <ion-input type="number" [(ngModel)]="model.beta" clear-input="true"placeholder="0.2 - 3.6"></ion-input>
+      </ion-item>
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>Pelet:</ion-label>
+          <ion-radio slot="start" value="pelet"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Extrato:</ion-label>
+        <ion-radio slot="start" value="extrato"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Flor:</ion-label>
+          <ion-radio slot="start" value="flor"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>    
+    <ion-button type="submit" (click)="cadastrar()">Cadastrar</ion-button>
+  <!-- </form> -->
+    <br>
+  </ion-card>
+  <div>
+  <ion-list *ngIf="lupulo!=['']">
+    <ion-item *ngFor="let todo of lupulo" >
+      {{todo}}
+    </ion-item>
+  </ion-list>
+</div>
+</ion-content>

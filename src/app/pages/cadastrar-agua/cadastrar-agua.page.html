@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color=success>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-center color=dark>
+      <h1>
+        <img width=40 src="assets/icon/cerveja.jpg">
+        Água
+        <img width=40 src="assets/icon/cerveja.jpg"></h1>
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card padding>
+    <ion-card-title text-center>
+      Cadastrar Água
+    </ion-card-title>
+    <ion-list>
+        <ion-item>
+            <ion-label>Origem:</ion-label>
+            <ion-input type="text" [(ngModel)]="model.origem" clear-input text-capitalize></ion-input>
+          </ion-item>
+      <ion-item>
+        <ion-label>Ph:</ion-label>
+        <ion-input type="number" [(ngModel)]="model.ph" clear-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cálcio:</ion-label>
+        <ion-input type="number" [(ngModel)]="model.calcio" clear-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Magnésio:</ion-label>
+        <ion-input type="number" [(ngModel)]="model.magnesio" clear-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sódio:</ion-label>
+        <ion-input type="number" [(ngModel)]="model.sodio" clear-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sulfato:</ion-label>
+        <ion-input type="number" [(ngModel)]="model.sulfato" clear-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Bicarbonato de Sódio:</ion-label>
+        <ion-input type="number" [(ngModel)]="model.bicarbonato" clear-input></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" (click)="cadastrar()">Cadastrar</ion-button>
+    <br>
+  </ion-card>
+</ion-content>
