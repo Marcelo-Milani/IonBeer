@@ -1,4 +1,4 @@
-import { Malte } from './../../models/malte';
+import { Malte } from '../../../models/malte';
 import { NavController, AlertController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 

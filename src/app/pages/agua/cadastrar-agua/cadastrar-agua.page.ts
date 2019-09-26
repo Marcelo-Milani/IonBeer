@@ -1,4 +1,4 @@
-import { Agua } from './../../models/agua';
+import { Agua } from '../../../models/agua';
 import { Component, OnInit, ViewChild } from '@angular/core';
 //import { StorageService, Item } from '../services/storage.service';
 import { Platform, ToastController, IonList, NavController, AlertController } from '@ionic/angular';

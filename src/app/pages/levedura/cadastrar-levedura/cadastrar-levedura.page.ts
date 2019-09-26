@@ -1,5 +1,5 @@
 import { NavController, AlertController } from '@ionic/angular';
-import { Levedura } from './../../models/levedura';
+import { Levedura } from '../../../models/levedura';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -18,44 +18,48 @@
     <ion-card-title text-center>
       Cadastrar Lúpulo
     </ion-card-title>
-    <!-- <form (ngSubmit)="cadastrar()"> -->
     <ion-list>
       <ion-item>
         <ion-label>Nome:</ion-label>
-        <ion-input type="text" [(ngModel)]="model.nome" clear-input="true" text-capitalize></ion-input>
+        <ion-input type="text" [(ngModel)]="data.nome" clear-input="true" text-capitalize></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>País</ion-label>
+        <ion-input [(ngModel)]="data.pais" placeholder="Digite o país" clear-input="true" text-capitalize></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Alpha %:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.alpha" clear-input="true" placeholder="2 - 18"></ion-input>
+        <ion-input type="number" [(ngModel)]="data.alpha" clear-input="true" placeholder="2 - 18"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Beta %:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.beta" clear-input="true"placeholder="0.2 - 3.6"></ion-input>
+        <ion-input type="number" [(ngModel)]="data.beta" clear-input="true" placeholder="0.2 - 3.6"></ion-input>
       </ion-item>
-      <ion-radio-group>
+      <ion-item>
+        <ion-label>Tipo</ion-label>
+        <ion-select [(ngModel)]="data.tipo" placeholder="Selecione o tipo">
+          <ion-select-option value="Amargor">Amargor</ion-select-option>
+          <ion-select-option value="Aroma">Aroma</ion-select-option>
+          <ion-select-option value="Ambos">Ambos</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-radio-group [(ngModel)]="data.formato">Formato:
         <ion-item>
           <ion-label>Pelet:</ion-label>
           <ion-radio slot="start" value="pelet"></ion-radio>
         </ion-item>
         <ion-item>
           <ion-label>Extrato:</ion-label>
-        <ion-radio slot="start" value="extrato"></ion-radio>
+          <ion-radio slot="start" value="extrato"></ion-radio>
         </ion-item>
         <ion-item>
           <ion-label>Flor:</ion-label>
           <ion-radio slot="start" value="flor"></ion-radio>
         </ion-item>
       </ion-radio-group>
-    </ion-list>    
-    <ion-button type="submit" (click)="cadastrar()">Cadastrar</ion-button>
-  <!-- </form> -->
+    </ion-list>
+    <ion-button type="submit" (click)="submitForm()">Cadastrar</ion-button>
     <br>
   </ion-card>
-  <div>
-  <ion-list *ngIf="lupulo!=['']">
-    <ion-item *ngFor="let todo of lupulo" >
-      {{todo}}
-    </ion-item>
-  </ion-list>
-</div>
 </ion-content>
