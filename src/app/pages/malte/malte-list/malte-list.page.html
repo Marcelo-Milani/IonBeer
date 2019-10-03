@@ -1,27 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>lupulo-list</ion-title>
+    <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Maltes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
 
-  <ion-list *ngFor="let item of lupulosData">
+  <ion-list *ngFor="let item of maltesData">
 
     <ion-item-sliding id="item100">
-      <ion-item href="/lupulo-details/{{item.id}}">
+      <ion-item href="/malte-details/{{item.id}}">
         <ion-label>
-          <h2>{{ item.nome }}</h2>
-          <p>{{ item.pais }}</p>
+          <h2 text-center>{{ item.nome }}</h2>
+          <p slot="start">Cor: {{ item.cor }}</p>
+          <p slot="end">Potêncial: {{ item.potencial }}</p>
         </ion-label>
-        <ion-note slot="end">
-          {{ item.tipo }}
-        </ion-note>
+        
       </ion-item> 
 
       <ion-item-options side="start">
         <ion-item-option>
-          <ion-icon slot="icon-only" name="create" routerLink='/lupulo-edit/{{item.id}}'></ion-icon>
+          <ion-icon slot="icon-only" name="create" routerLink='/malte-edit/{{item.id}}'></ion-icon>
         </ion-item-option>
       </ion-item-options>
 
@@ -33,7 +35,7 @@
     </ion-item-sliding>
   </ion-list>
 
-  <ion-button expand="full" [routerLink]="['/cadastrar-lupulo']">
-    Adicionar Lúpulo
+  <ion-button expand="full" [routerLink]="['/cadastrar-malte']">
+    Adicionar Malte
   </ion-button>
 </ion-content>

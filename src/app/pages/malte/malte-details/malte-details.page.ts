@@ -1,3 +1,6 @@
+import { MalteService } from './../../../services/malte.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Malte } from './../../../models/malte';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MalteDetailsPage implements OnInit {
 
-  constructor() { }
+  id: number;
+  data: Malte;
+
+  constructor(
+    public activatedRoute: ActivatedRoute,
+    public router: Router,
+    public maltService: MalteService
+  ) { 
+    this.data = new Malte();
+
+  }
 
   ngOnInit() {
+    this.id = this.activatedRoute.snapshot.params["id"];
+    //get item details using id
+    this.maltService.getItem(this.id).subscribe(response => {
+      console.log(response);
+      this.data = response;
+    })
   }
+ 
 
 }

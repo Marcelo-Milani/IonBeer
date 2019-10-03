@@ -1,9 +1,28 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>malte-details</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar color="sucssess">
+        <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      <ion-title>
+        Detalhes do Malte
+      </ion-title>
+    </ion-toolbar>
+  </ion-header> 
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label><strong>Nome:</strong> {{data.nome}}</ion-label>      
+    </ion-item>
+   
+    <ion-item>
+      <ion-label><strong>País::</strong> {{data.cor}}</ion-label>      
+    </ion-item>
+  
+    <ion-item>
+      <ion-label><strong>Tipo:</strong> {{data.potencial}}</ion-label>      
+    </ion-item> 
+    
+  
+    <ion-button expand="full" [routerLink]="[ '/malte-list']">
+      Voltar
+    </ion-button>
+  </ion-content>

@@ -1,5 +1,7 @@
+import { Router } from '@angular/router';
+import { MalteService } from './../../../services/malte.service';
 import { Malte } from '../../../models/malte';
-import { NavController, AlertController } from '@ionic/angular';
+import { NavController, AlertController, ToastController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,35 +10,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastrar-malte.page.scss'],
 })
 export class CadastrarMaltePage implements OnInit {
+
   data: Malte;
-  malte = [];
 
-  ngOnInit() { }
-
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-
-    this.data = new Malte();
-
-  }
-  async cadastrar() {
-    if (this.data.nome != '' && this.data.cor != undefined && this.data.potencial != undefined) {
-      this.malte.push(this.data.nome);
-      this.malte.push(this.data.cor);
-      this.malte.push(this.data.potencial);
-      
-      console.log(this.malte);
-      alert(this.malte);
-
-    } else {
-      const alert = this.alertCtrl.create({
-        header: 'Aviso',
-        subHeader: 'Cadastro',
-        message: 'Preencha corretamente todos os dados! ',
-        buttons: ['Cancel', 'Ok']
-      });
-
-      (await alert).present();
+    constructor(
+      public maltService: MalteService,
+      public router: Router,
+      public toastController: ToastController) {
+      this.data = new Malte();
     }
-  }
 
-}
+    ngOnInit() {
+    }
+
+    submitForm() {
+      console.log("passei no submit form")
+      this.maltService.createItem(this.data).subscribe((response) => {
+        console.log(response);
+        this.presentToast();
+        
+      });
+      this.router.navigate(['malte-list']);
+    }
+
+    async presentToast() {
+      const toast = await this.toastController.create({
+        message: 'Malte cadastrado com sucesso!',
+        duration: 3000
+      });
+      toast.present();
+    }
+
+  }

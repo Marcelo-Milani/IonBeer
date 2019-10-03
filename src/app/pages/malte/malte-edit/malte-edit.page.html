@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Malte Edit</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input [(ngModel)]="data.nome" placeholder="Digite o nome"></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label>País</ion-label>
+      <ion-input [(ngModel)]="data.cor" placeholder="Digite a cor EBC"></ion-input>
+    </ion-item>
+     
+    <ion-item>
+      <ion-label>Alfa-Ácido</ion-label>
+      <ion-input [(ngModel)]="data.potencial" placeholder="Digite o potêncial"></ion-input>
+    </ion-item>    
+  
+    <ion-button expand="full" (click)="update()">
+      Atualizar
+    </ion-button>
+    <ion-button expand="full" [routerLink]="[ '/malte-list']"  color="danger" >
+      Cancelar
+    </ion-button>
+  </ion-content>
+  

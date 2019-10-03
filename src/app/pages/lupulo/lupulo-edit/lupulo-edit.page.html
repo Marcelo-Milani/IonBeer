@@ -4,6 +4,58 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="data.nome" placeholder="Digite o nome"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label>País</ion-label>
+    <ion-input [(ngModel)]="data.pais" placeholder="Digite o país"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label>Tipo</ion-label>
+    <ion-select [(ngModel)]="data.tipo" placeholder="Selecione o tipo">
+      <ion-select-option value="Amargor">Amargor</ion-select-option>
+      <ion-select-option value="Aroma">Aroma</ion-select-option>
+      <ion-select-option value="Ambos">Ambos</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-radio-group [(ngModel)]="data.formato">
+  
+    <ion-list-header>
+      <ion-label>Formato</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Pellet</ion-label>
+      <ion-radio slot="start" value="Pellet"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Flor</ion-label>
+      <ion-radio slot="start" value="Flor"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+ 
+  <ion-item>
+    <ion-label>Alfa-Ácido</ion-label>
+    <ion-input [(ngModel)]="data.alpha" placeholder="Digite o alfa-ácido"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Beta-Ácido</ion-label>
+    <ion-input [(ngModel)]="data.beta" placeholder="Digite o beta-ácido"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="update()">
+    Atualizar
+  </ion-button>
+  <ion-button expand="full" [routerLink]="[ '/lupulo-list']"  color="danger" >
+    Cancelar
+  </ion-button>
 </ion-content>

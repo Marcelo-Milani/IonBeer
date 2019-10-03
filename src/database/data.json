@@ -9,20 +9,12 @@
       "beta": 6
     },
     {
-      "id": 2,
-      "nome": "Amarillo",
-      "pais": "USA",
-      "tipo": "Aroma",
-      "alfa": 9.2,
-      "beta": 6
-    },
-    {
-      "nome": "marcelo",
-      "pais": "brasil",
+      "nome": "Lupulo ",
+      "pais": "Uruguai",
       "alpha": 5,
       "beta": 4,
       "tipo": "Aroma",
-      "formato": "pelet",
+      "formato": "Flor",
       "id": 3
     },
     {
@@ -33,6 +25,44 @@
       "tipo": "Aroma",
       "formato": "pelet",
       "id": 4
+    }
+  ],
+  "maltes": [
+    {
+      "nome": "Malte19",
+      "cor": "35",
+      "potencial": 4,
+      "id": 1
+    },
+    {
+      "nome": "Malte2",
+      "cor": 2,
+      "potencial": 5,
+      "id": 2
+    },
+    {
+      "nome": "Malte3",
+      "cor": 2,
+      "potencial": 5,
+      "id": 3
+    },
+    {
+      "nome": "malte4",
+      "cor": 5,
+      "potencial": 100,
+      "id": 4
+    },
+    {
+      "nome": "malte6",
+      "cor": 47,
+      "potencial": 34,
+      "id": 5
+    },
+    {
+      "nome": "malte 7",
+      "cor": 65,
+      "potencial": 44,
+      "id": 6
     }
   ]
 }

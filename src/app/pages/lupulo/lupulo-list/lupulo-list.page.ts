@@ -19,10 +19,10 @@ export class LupuloListPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.getAllStudents(); console.log("ooo");
+    this.getAllLupulos(); console.log("ooo");
   }
 
-  getAllStudents() {
+  getAllLupulos() {
     //Get saved list of students
     this.lupService.getList().subscribe(response => {
     console.log(response);
@@ -36,7 +36,7 @@ export class LupuloListPage implements OnInit {
     this.lupService.deleteItem(item.id).subscribe(Response => {
       //Update list after delete is successful
       this.presentToast();
-      this.getAllStudents();
+      this.getAllLupulos();
     });
   }
 

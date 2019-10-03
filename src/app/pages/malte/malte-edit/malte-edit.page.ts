@@ -1,41 +1,42 @@
-import { LupuloService } from './../../../services/lupulo.service';
-import { Lupulo } from './../../../models/lupulo';
-import { Component, OnInit } from '@angular/core';
+import { MalteService } from './../../../services/malte.service';
+import { Malte } from './../../../models/malte';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-lupulo-edit',
-  templateUrl: './lupulo-edit.page.html',
-  styleUrls: ['./lupulo-edit.page.scss'],
+  selector: 'app-malte-edit',
+  templateUrl: './malte-edit.page.html',
+  styleUrls: ['./malte-edit.page.scss'],
 })
-export class LupuloEditPage implements OnInit {
+export class MalteEditPage implements OnInit {
 
   id: number;
-  data: Lupulo;
+  data: Malte;
 
   constructor(public activatedRoute: ActivatedRoute,
     public router: Router,
-    public lupService: LupuloService,
+    public maltService: MalteService,
     public toastController: ToastController
   ) {
-    this.data = new Lupulo();
+    this.data = new Malte();
   }
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params["id"];
     //get item details using id
-    this.lupService.getItem(this.id).subscribe(response => {
+    this.maltService.getItem(this.id).subscribe(response => {
       //console.log(response);
       this.data = response;
     })
   }
   update() {
     //Update item by taking id and updated data object
-    this.lupService.updateItem(this.id, this.data).subscribe(response => {
+    this.maltService.updateItem(this.id, this.data).subscribe(response => {
       this.presentToast();
-      this.router.navigate(['lupulo-list']);
+      
     })
+    this.router.navigate(['malte-list']);
   }
 
   async presentToast() {
@@ -45,4 +46,5 @@ export class LupuloEditPage implements OnInit {
     });
     toast.present();
   }
+
 }

@@ -10,9 +10,10 @@ const routes: Routes = [
   { path: 'lupulo-list', loadChildren: './pages/lupulo/lupulo-list/lupulo-list.module#LupuloListPageModule' },
   { path: 'lupulo-edit/:id', loadChildren: './pages/lupulo/lupulo-edit/lupulo-edit.module#LupuloEditPageModule' },
   { path: 'lupulo-details/:id', loadChildren: './pages/lupulo/lupulo-details/lupulo-details.module#LupuloDetailsPageModule' },
- //{ path: 'lupulo-details', loadChildren: './pages/lupulo/lupulo-details/lupulo-details.module#LupuloDetailsPageModule' },
   { path: 'cadastrar-malte', loadChildren: './pages/malte/cadastrar-malte/cadastrar-malte.module#CadastrarMaltePageModule' },
-  { path: 'malte-details', loadChildren: './pages/malte/malte-details/malte-details.module#MalteDetailsPageModule' },
+  { path: 'malte-details/:id', loadChildren: './pages/malte/malte-details/malte-details.module#MalteDetailsPageModule' },
+  { path: 'malte-list', loadChildren: './pages/malte/malte-list/malte-list.module#MalteListPageModule' },
+  { path: 'malte-edit/:id', loadChildren: './pages/malte/malte-edit/malte-edit.module#MalteEditPageModule' },
   { path: 'receitas-details', loadChildren: './pages/receita/receitas-details/receitas-details.module#ReceitasDetailsPageModule' },
   { path: 'cadastrar-levedura', loadChildren: './pages/levedura/cadastrar-levedura/cadastrar-levedura.module#CadastrarLeveduraPageModule' },
   { path: 'levedura-details', loadChildren: './pages/levedura/levedura-details/levedura-details.module#LeveduraDetailsPageModule' },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'cadastrar-receitas', loadChildren: './pages/receita/cadastrar-receitas/cadastrar-receitas.module#CadastrarReceitasPageModule' },
   { path: 'cadastrar-tipo-cerveja', loadChildren: './pages/tipo-cerveja/cadastrar-tipo-cerveja/cadastrar-tipo-cerveja.module#CadastrarTipoCervejaPageModule' },
   { path: 'tipo-cerveja-details', loadChildren: './pages/tipo-cerveja/tipo-cerveja-details/tipo-cerveja-details.module#TipoCervejaDetailsPageModule' },
+  
 
 ];
 
