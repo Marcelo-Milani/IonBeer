@@ -2,8 +2,8 @@ import { LupuloService } from './../../../services/lupulo.service';
 import { Lupulo } from '../../../models/lupulo';
 import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController, ToastController } from '@ionic/angular';
-import { toastController } from '@ionic/core';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class CadastrarLupuloPage implements OnInit {
   
-  data: Lupulo
+  data: Lupulo;
  
   constructor(
       public lupService: LupuloService,
@@ -26,7 +26,9 @@ export class CadastrarLupuloPage implements OnInit {
   }
  
   submitForm() {
+    console.log("passei no submit form")
     this.lupService.createItem(this.data).subscribe((response) => {
+     console.log(response);
       this.presentToast();
       this.router.navigate(['lupulo-list']);
     });

@@ -18,20 +18,20 @@
       Cadastrar Malte
     </ion-card-title>
     <ion-list>
-        <ion-item>
-            <ion-label>Nome:</ion-label>
-            <ion-input type="text" [(ngModel)]="model.nome" clear-input text-capitalize></ion-input>
-          </ion-item>
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" [(ngModel)]="data.nome" clear-input text-capitalize></ion-input>
+      </ion-item>
       <ion-item>
         <ion-label>Cor EBC:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.cor" clear-input placeholder="2 - 1500"></ion-input>
+        <ion-input type="number" [(ngModel)]="data.cor" clear-input placeholder="2 - 1500"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Potencial %:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.potencial" clear-input placeholder="5 - 100"></ion-input>
+        <ion-input type="number" [(ngModel)]="data.potencial" clear-input placeholder="5 - 100"></ion-input>
       </ion-item>
     </ion-list>
-    <ion-button type="submit" (click)="cadastrar()">Cadastrar</ion-button>
+    <ion-button expand="full" (click)="cadastrar()" [routerLink]="['/lupulo-list']">Cadastrar</ion-button>
     <br>
   </ion-card>
 </ion-content>

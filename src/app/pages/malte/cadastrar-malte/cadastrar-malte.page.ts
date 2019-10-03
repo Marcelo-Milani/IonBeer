@@ -8,21 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastrar-malte.page.scss'],
 })
 export class CadastrarMaltePage implements OnInit {
-  model: Malte;
+  data: Malte;
   malte = [];
 
   ngOnInit() { }
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
-    this.model = new Malte();
+    this.data = new Malte();
 
   }
   async cadastrar() {
-    if (this.model.nome != '' && this.model.cor != undefined && this.model.potencial != undefined) {
-      this.malte.push(this.model.nome);
-      this.malte.push(this.model.cor);
-      this.malte.push(this.model.potencial);
+    if (this.data.nome != '' && this.data.cor != undefined && this.data.potencial != undefined) {
+      this.malte.push(this.data.nome);
+      this.malte.push(this.data.cor);
+      this.malte.push(this.data.potencial);
       
       console.log(this.malte);
       alert(this.malte);

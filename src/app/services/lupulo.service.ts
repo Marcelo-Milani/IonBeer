@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Lupulo } from '../models/lupulo';
 import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { retry, catchError } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root'
@@ -41,8 +41,8 @@ export class LupuloService {
 
   // Create a new item
   createItem(item): Observable<Lupulo> {
-    return this.http
-      .post<Lupulo>(this.base_path, JSON.stringify(item), this.httpOptions)
+    console.log("passei no create item tambem")
+    return this.http.post<Lupulo>(this.base_path, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)

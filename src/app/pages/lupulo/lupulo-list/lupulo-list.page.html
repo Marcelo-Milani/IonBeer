@@ -4,6 +4,36 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
 
+  <ion-list *ngFor="let item of lupulosData">
+
+    <ion-item-sliding id="item100">
+      <ion-item href="/lupulo-details/{{item.id}}">
+        <ion-label>
+          <h2>{{ item.nome }}</h2>
+          <p>{{ item.pais }}</p>
+        </ion-label>
+        <ion-note slot="end">
+          {{ item.tipo }}
+        </ion-note>
+      </ion-item> -->
+
+      <ion-item-options side="start">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="create" routerLink='/lupulo-edit/{{item.id}}'></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash" (click)="delete(item)"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-button expand="full" [routerLink]="['/cadastrar-lupulo']">
+    Adicionar Lúpulo
+  </ion-button>
 </ion-content>

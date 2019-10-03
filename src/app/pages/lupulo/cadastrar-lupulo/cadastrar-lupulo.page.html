@@ -36,30 +36,31 @@
         <ion-input type="number" [(ngModel)]="data.beta" clear-input="true" placeholder="0.2 - 3.6"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Tipo</ion-label>
+        <ion-label>Tipo:</ion-label>
         <ion-select [(ngModel)]="data.tipo" placeholder="Selecione o tipo">
           <ion-select-option value="Amargor">Amargor</ion-select-option>
           <ion-select-option value="Aroma">Aroma</ion-select-option>
           <ion-select-option value="Ambos">Ambos</ion-select-option>
         </ion-select>
       </ion-item>
-
-      <ion-radio-group [(ngModel)]="data.formato">Formato:
-        <ion-item>
-          <ion-label>Pelet:</ion-label>
-          <ion-radio slot="start" value="pelet"></ion-radio>
-        </ion-item>
-        <ion-item>
-          <ion-label>Extrato:</ion-label>
-          <ion-radio slot="start" value="extrato"></ion-radio>
-        </ion-item>
-        <ion-item>
-          <ion-label>Flor:</ion-label>
-          <ion-radio slot="start" value="flor"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
+      <ion-item>
+        <ion-radio-group [(ngModel)]="data.formato">Formato:
+          <ion-item>
+            <ion-label>Pelet:</ion-label>
+            <ion-radio slot="start" value="pelet"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Extrato:</ion-label>
+            <ion-radio slot="start" value="extrato"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Flor:</ion-label>
+            <ion-radio slot="start" value="flor"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
     </ion-list>
-    <ion-button type="submit" (click)="submitForm()">Cadastrar</ion-button>
+    <ion-button  expand="full" (click)="submitForm()">Cadastrar</ion-button>
     <br>
   </ion-card>
 </ion-content>
