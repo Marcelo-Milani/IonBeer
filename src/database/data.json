@@ -64,5 +64,21 @@
       "potencial": 44,
       "id": 6
     }
+  ],
+  "leveduras": [
+    {
+      "id": 1,
+      "nome": "",
+      "atenuacao": 1,
+      "tempMin": 1,
+      "tempMax": 1
+    },
+    {
+      "nome": "levedura",
+      "atenuacao": 6,
+      "tempMin": 67,
+      "tempMax": 80,
+      "id": 2
+    }
   ]
 }

@@ -1,6 +1,8 @@
-import { NavController, AlertController } from '@ionic/angular';
+import { LeveduraService } from './../../../services/levedura.service';
+import { NavController, AlertController, ToastController } from '@ionic/angular';
 import { Levedura } from '../../../models/levedura';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-levedura',
@@ -9,36 +11,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarLeveduraPage implements OnInit {
 
-  model: Levedura;
-  levedura = [];
+  data: Levedura;
 
-  ngOnInit() { }
+  constructor(
+    public levService: LeveduraService,
+    public router: Router,
+    public toastController: ToastController ) {
+    this.data = new Levedura();
+  }
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  ngOnInit() {
+  }
 
-    this.model = new Levedura();
+  submitForm() {
+    console.log("passei no submit levedura")
+    this.levService.createItem(this.data).subscribe((response) => {
+      console.log(response);
+      this.presentToast();
+      this.router.navigate(['levedura-list']);
+    });
 
   }
-  async cadastrar() {
-    if (this.model.nome!='' && this.model.atenuacao != undefined && this.model.tempMin != undefined && this.model.tempMax != undefined ) {
-      this.levedura.push(this.model.nome);
-      this.levedura.push(this.model.atenuacao);
-      this.levedura.push(this.model.tempMin);
-      this.levedura.push(this.model.tempMax);
-     
-      console.log(this.levedura);
-      alert(this.levedura);
 
-    } else {
-      const alert = this.alertCtrl.create({
-        header: 'Aviso',
-        subHeader: 'Cadastro',
-        message: 'Preencha corretamente todos os dados! ',
-        buttons: ['Cancel', 'Ok']
-      });
-
-      (await alert).present();
-    }
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Levedura cadastrada com sucesso!',
+      duration: 3000
+    });
+    toast.present();
   }
 
 }

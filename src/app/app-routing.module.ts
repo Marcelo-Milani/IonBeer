@@ -22,6 +22,8 @@ const routes: Routes = [
   { path: 'cadastrar-receitas', loadChildren: './pages/receita/cadastrar-receitas/cadastrar-receitas.module#CadastrarReceitasPageModule' },
   { path: 'cadastrar-tipo-cerveja', loadChildren: './pages/tipo-cerveja/cadastrar-tipo-cerveja/cadastrar-tipo-cerveja.module#CadastrarTipoCervejaPageModule' },
   { path: 'tipo-cerveja-details', loadChildren: './pages/tipo-cerveja/tipo-cerveja-details/tipo-cerveja-details.module#TipoCervejaDetailsPageModule' },
+  { path: 'levedura-list', loadChildren: './pages/levedura/levedura-list/levedura-list.module#LeveduraListPageModule' },
+  { path: 'levedura-edit', loadChildren: './pages/levedura/levedura-edit/levedura-edit.module#LeveduraEditPageModule' },
   
 
 ];

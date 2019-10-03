@@ -18,25 +18,25 @@
       Cadastrar Levedura
     </ion-card-title>
     <ion-list>
-        <ion-item>
-            <ion-label>Nome:</ion-label>
-            <ion-input type="text" [(ngModel)]="model.nome" clear-input text-capitalize></ion-input>
-          </ion-item>
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" [(ngModel)]="data.nome" clear-input text-capitalize></ion-input>
+      </ion-item>
       <ion-item>
         <ion-label>Atenuação %:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.atenuacao" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.atenuacao" clear-input></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Temp. Min.de Trabalho:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.tempMin" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.tempMin" clear-input></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Temp. Max. de Trabalho:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.tempMax" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.tempMax" clear-input></ion-input>
       </ion-item>
 
     </ion-list>
-    <ion-button type="submit" (click)="cadastrar()">Cadastrar</ion-button>
+    <ion-button type="submit" (click)="submitForm()">Cadastrar</ion-button>
     <br>
   </ion-card>
 </ion-content>
