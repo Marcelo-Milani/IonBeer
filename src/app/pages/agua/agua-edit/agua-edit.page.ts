@@ -1,49 +1,50 @@
-import { LeveduraService } from './../../../services/levedura.service';
+import { AguaService } from './../../../services/agua.service';
+import { Agua } from './../../../models/agua';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Levedura } from './../../../models/levedura';
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-levedura-edit',
-  templateUrl: './levedura-edit.page.html',
-  styleUrls: ['./levedura-edit.page.scss'],
+  selector: 'app-agua-edit',
+  templateUrl: './agua-edit.page.html',
+  styleUrls: ['./agua-edit.page.scss'],
 })
-export class LeveduraEditPage implements OnInit {
+export class AguaEditPage implements OnInit {
 
   id: number;
-  data: Levedura;
+  data: Agua;
 
   constructor(public activatedRoute: ActivatedRoute,
     public router: Router,
-    public levService: LeveduraService,
+    public aguService: AguaService,
     public toastController: ToastController
   ) {
-    this.data = new Levedura();
+    this.data = new Agua();
   }
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params["id"];
     //get item details using id
-    this.levService.getItem(this.id).subscribe(response => {
+    this.aguService.getItem(this.id).subscribe(response => {
       //console.log(response);
       this.data = response;
     })
   }
   update() {
     //Update item by taking id and updated data object
-    this.levService.updateItem(this.id, this.data).subscribe(response => {
+    this.aguService.updateItem(this.id, this.data).subscribe(response => {
       this.presentToast();
-      this.router.navigate(['levedura-list']);
+      this.router.navigate(['agua-list']);
     })
   }
 
   async presentToast() {
     const toast = await this.toastController.create({
-      message: 'Levedura alterada com sucesso!',
+      message: 'Água alterada com sucesso!',
       duration: 3000
     });
     toast.present();
   }
-
 }
+
+

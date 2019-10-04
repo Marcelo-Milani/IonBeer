@@ -1,26 +1,25 @@
 <ion-header>
     <ion-toolbar>
-      <ion-title>Leveduras</ion-title>
+      <ion-title>Cerveja</ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-content class="ion-padding">
   
-    <ion-list *ngFor="let item of levedurasData">
+    <ion-list *ngFor="let item of cervejasData">
   
       <ion-item-sliding id="item100">
-        <ion-item href="/levedura-details/{{item.id}}">
+        <ion-item href="/tipo-cerveja-details/{{item.id}}">
           <ion-label>
-            <h2>Nome: {{ item.nome }}</h2>
-            <p>Atenuação: {{ item.atenuacao }} %</p>
-            <p>Temperatura min: {{ item.tempMin }} ºC</p>
-            <p>Temperatura máx: {{ item.tempMax }} ºC</p>
+            <h2>Tipo: {{ item.tipo }}</h2>
+            <p> OG: {{ item.og }}</p>
+            <p>ABV: {{ item.abv }}</p>
           </ion-label>
-        </ion-item> 
+        </ion-item>
   
         <ion-item-options side="start">
           <ion-item-option>
-            <ion-icon slot="icon-only" name="create" routerLink='/levedura-edit/{{item.id}}'></ion-icon>
+            <ion-icon slot="icon-only" name="create" routerLink='/tipo-cerveja-edit/{{item.id}}'></ion-icon>
           </ion-item-option>
         </ion-item-options>
   
@@ -32,8 +31,8 @@
       </ion-item-sliding>
     </ion-list>
   
-    <ion-button  [routerLink]="['/cadastrar-levedura']">
-      Adicionar Levedura
+    <ion-button  [routerLink]="['/cadastrar-tipo-cerveja']">
+      Adicionar Cerveja
     </ion-button>
     <ion-button  [routerLink]="['/receitas']">
       Voltar

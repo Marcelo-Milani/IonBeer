@@ -1,5 +1,6 @@
 import { LeveduraService } from './../../../services/levedura.service';
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-levedura-list',
@@ -9,24 +10,24 @@ import { Component, OnInit } from '@angular/core';
 export class LeveduraListPage implements OnInit {
 
   
-  lupulosData: any;
+  levedurasData: any;
 
   constructor(public lupService: LeveduraService, public toastController: ToastController) {
-    this.lupulosData = [];
+    this.levedurasData = [];
   }
 
   ngOnInit() {
   }
 
   ionViewWillEnter() {
-    this.getAllLupulos(); console.log("ooo");
+    this.getAllLeveduras(); console.log("ooo");
   }
 
-  getAllLupulos() {
+  getAllLeveduras() {
     //Get saved list of students
     this.lupService.getList().subscribe(response => {
     console.log(response);
-      this.lupulosData = response;
+      this.levedurasData = response;
     })
   }
 
@@ -36,13 +37,13 @@ export class LeveduraListPage implements OnInit {
     this.lupService.deleteItem(item.id).subscribe(Response => {
       //Update list after delete is successful
       this.presentToast();
-      this.getAllLupulos();
+      this.getAllLeveduras();
     });
   }
 
   async presentToast() {
     const toast = await this.toastController.create({
-      message: 'Lúpulo excluído com sucesso!',
+      message: 'Levedura excluída com sucesso!',
       duration: 3000
     });
     toast.present();

@@ -11,7 +11,9 @@ export class MalteListPage implements OnInit {
 
   maltesData: any;
  
-  constructor(public maltService: MalteService, public toastController: ToastController) {
+  constructor(
+    public maltService: MalteService, 
+    public toastController: ToastController) {
     this.maltesData = [];
   }
  

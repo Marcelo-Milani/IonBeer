@@ -1,7 +1,8 @@
+import { AguaService } from './../../../services/agua.service';
 import { Agua } from '../../../models/agua';
 import { Component, OnInit, ViewChild } from '@angular/core';
-//import { StorageService, Item } from '../services/storage.service';
 import { Platform, ToastController, IonList, NavController, AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-agua',
@@ -10,39 +11,33 @@ import { Platform, ToastController, IonList, NavController, AlertController } fr
 })
 export class CadastrarAguaPage implements OnInit {
 
-  model: Agua;
-  agua = [];
+  data: Agua;
 
-  ngOnInit() { }
+  constructor(
+    public aguService: AguaService,
+    public router: Router,
+    public toastController: ToastController ) {
+    this.data = new Agua();
+  }
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  ngOnInit() {
+  }
 
-    this.model = new Agua();
+  submitForm() {
+    this.aguService.createItem(this.data).subscribe((response) => {
+      console.log(response);
+      this.presentToast();
+      this.router.navigate(['agua-list']);
+    });
 
   }
-  async cadastrar() {
-    if (this.model.origem!='' && this.model.ph != undefined && this.model.calcio != undefined && this.model.sodio != undefined && this.model.magnesio != undefined && this.model.sodio != undefined && this.model.sulfato != undefined && this.model.bicarbonato != undefined) {
-      this.agua.push(this.model.origem);
-      this.agua.push(this.model.ph);
-      this.agua.push(this.model.calcio);
-      this.agua.push(this.model.magnesio);
-      this.agua.push(this.model.sodio);
-      this.agua.push(this.model.magnesio);
-      this.agua.push(this.model.bicarbonato);
-     
-      console.log(this.agua);
-      alert(this.agua);
 
-    } else {
-      const alert = this.alertCtrl.create({
-        header: 'Aviso',
-        subHeader: 'Cadastro',
-        message: 'Preencha corretamente todos os dados! ',
-        buttons: ['Cancel', 'Ok']
-      });
-
-      (await alert).present();
-    }
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Agua cadastrada com sucesso!',
+      duration: 3000
+    });
+    toast.present();
   }
 }
 //   aguas : Item[]=[];

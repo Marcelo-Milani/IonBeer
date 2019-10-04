@@ -1,5 +1,6 @@
 export class Agua {
 
+    id: number;
     origem:string;
     ph: number;
     calcio: number;

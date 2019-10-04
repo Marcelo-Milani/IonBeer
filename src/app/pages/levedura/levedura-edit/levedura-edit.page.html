@@ -1,9 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>levedura-edit</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-title>Editar Levedura</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input [(ngModel)]="data.nome" placeholder="Digite o nome" clear-input text-capitalize></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label>Atenuação %: </ion-label>
+      <ion-input [(ngModel)]="data.atenuacao" placeholder="Insira percentual de atenuação" clear-input ></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label>Temperatura Mínima ºC: </ion-label>
+      <ion-input [(ngModel)]="data.tempMin" placeholder="Digite a temperatura mínima" clear-input></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Temperatura Máxima ºC: </ion-label>
+      <ion-input [(ngModel)]="data.tempMax" placeholder="Digite a temperatura máxima" clear-input></ion-input>
+    </ion-item>
+  
+    <ion-button expand="full" (click)="update()">
+      Atualizar
+    </ion-button>
+    <ion-button  [routerLink]="[ '/levedura-list']"  color="danger" >
+      Cancelar
+    </ion-button>
+  </ion-content>
+  

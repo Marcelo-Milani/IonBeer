@@ -21,34 +21,35 @@
     <ion-list>
         <ion-item>
             <ion-label>Origem:</ion-label>
-            <ion-input type="text" [(ngModel)]="model.origem" clear-input text-capitalize></ion-input>
+            <ion-input type="text" [(ngModel)]="data.origem" clear-input text-capitalize></ion-input>
           </ion-item>
       <ion-item>
         <ion-label>Ph:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.ph" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.ph" clear-input></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Cálcio:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.calcio" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.calcio" clear-input></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Magnésio:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.magnesio" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.magnesio" clear-input></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Sódio:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.sodio" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.sodio" clear-input></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Sulfato:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.sulfato" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.sulfato" clear-input></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Bicarbonato de Sódio:</ion-label>
-        <ion-input type="number" [(ngModel)]="model.bicarbonato" clear-input></ion-input>
+        <ion-input type="number" [(ngModel)]="data.bicarbonato" clear-input></ion-input>
       </ion-item>
     </ion-list>
-    <ion-button type="submit" (click)="cadastrar()">Cadastrar</ion-button>
+    <ion-button type="submit" (click)="submitForm()">Cadastrar</ion-button>
+    <ion-button routerLink="/agua-list">Listar</ion-button>
     <br>
   </ion-card>
 </ion-content>

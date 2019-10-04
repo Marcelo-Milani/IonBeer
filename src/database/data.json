@@ -68,10 +68,10 @@
   "leveduras": [
     {
       "id": 1,
-      "nome": "",
-      "atenuacao": 1,
-      "tempMin": 1,
-      "tempMax": 1
+      "nome": "Levedura 25",
+      "atenuacao": "50",
+      "tempMin": "60",
+      "tempMax": "70"
     },
     {
       "nome": "levedura",
@@ -79,6 +79,70 @@
       "tempMin": 67,
       "tempMax": 80,
       "id": 2
+    },
+    {
+      "nome": "Levedura 2",
+      "atenuacao": 30,
+      "tempMin": 60,
+      "tempMax": 80,
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "aguas": [
+    {
+      "id": 1,
+      "origem": "Garibaldi",
+      "ph": 5,
+      "calcio": 7,
+      "magnesio": 2,
+      "sodio": 6,
+      "sulfato": 2,
+      "bicarbonato": 2
+    },
+    {
+      "origem": "carlos barbosa",
+      "ph": 5,
+      "calcio": 9,
+      "magnesio": 5,
+      "sodio": 7,
+      "sulfato": 9,
+      "bicarbonato": 2,
+      "id": 3
+    }
+  ],
+  "cervejas": [
+    {
+      "id": 1,
+      "tipo": "nome",
+      "og": 1044,
+      "fg": 1002,
+      "ibu": 123,
+      "srm": 234,
+      "abv": 4.85
+    },
+    {
+      "tipo": "pale ale",
+      "og": 1040,
+      "fg": 1400,
+      "ibu": 2,
+      "srm": 12,
+      "abv": 4,
+      "id": 2
+    },
+    {
+      "tipo": "pale ale",
+      "og": 1044,
+      "fg": 123,
+      "ibu": 123,
+      "srm": 123,
+      "abv": 4,
+      "id": 3
     }
   ]
 }
