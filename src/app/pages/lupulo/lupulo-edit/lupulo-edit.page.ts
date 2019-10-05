@@ -30,7 +30,7 @@ export class LupuloEditPage implements OnInit {
       this.data = response;
     })
   }
-  update() {
+ async update() {
     //Update item by taking id and updated data object
     this.lupService.updateItem(this.id, this.data).subscribe(response => {
       this.presentToast();

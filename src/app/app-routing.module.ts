@@ -24,10 +24,12 @@ const routes: Routes = [
   { path: 'agua-edit/:id', loadChildren: './pages/agua/agua-edit/agua-edit.module#AguaEditPageModule' },
   { path: 'cadastrar-receitas', loadChildren: './pages/receita/cadastrar-receitas/cadastrar-receitas.module#CadastrarReceitasPageModule' },
   { path: 'receitas-details/:id', loadChildren: './pages/receita/receitas-details/receitas-details.module#ReceitasDetailsPageModule' },
+  { path: 'receitas-details', loadChildren: './pages/receita/receitas-details/receitas-details.module#ReceitasDetailsPageModule' },
   { path: 'receitas-edit/:id', loadChildren: './pages/receita/receitas-edit/receitas-edit.module#ReceitasEditPageModule' },
   { path: 'receitas-list', loadChildren: './pages/receita/receitas-list/receitas-list.module#ReceitasListPageModule' },
   { path: 'cadastrar-tipo-cerveja', loadChildren: './pages/tipo-cerveja/cadastrar-tipo-cerveja/cadastrar-tipo-cerveja.module#CadastrarTipoCervejaPageModule' },
   { path: 'tipo-cerveja-details/:id', loadChildren: './pages/tipo-cerveja/tipo-cerveja-details/tipo-cerveja-details.module#TipoCervejaDetailsPageModule' },
+  { path: 'tipo-cerveja-details', loadChildren: './pages/tipo-cerveja/tipo-cerveja-details/tipo-cerveja-details.module#TipoCervejaDetailsPageModule' },
   { path: 'tipo-cerveja-list', loadChildren: './pages/tipo-cerveja/tipo-cerveja-list/tipo-cerveja-list.module#TipoCervejaListPageModule' },
   { path: 'tipo-cerveja-edit/:id', loadChildren: './pages/tipo-cerveja/tipo-cerveja-edit/tipo-cerveja-edit.module#TipoCervejaEditPageModule' },
 

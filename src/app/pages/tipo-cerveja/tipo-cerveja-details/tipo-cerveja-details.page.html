@@ -1,14 +1,17 @@
 <ion-header>
-  <ion-toolbar color=success>
+  <ion-toolbar class="ion-padding-end" color=success>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-avatar slot="start">
+      <img src="assets/icon/cerveja.jpg">
+    </ion-avatar>
     <ion-title text-center color=dark>
-      <h3>
-        <img width=40 src="assets/icon/cerveja.jpg">
-        Cerveja
-        <img width=40 src="assets/icon/cerveja.jpg"></h3>
+      <h3>Cerveja</h3>
     </ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/icon/cerveja.jpg">
+    </ion-avatar>
   </ion-toolbar>
 </ion-header>
 
@@ -40,7 +43,7 @@
   <ion-button [routerLink]="[ '/tipo-cerveja-list']">
     Voltar
   </ion-button>
-  <ion-button  routerLink='/tipo-cerveja-edit/{{data.id}}'>
+  <ion-button routerLink='/tipo-cerveja-edit/{{data.id}}'>
     Editar
   </ion-button>
 </ion-content>

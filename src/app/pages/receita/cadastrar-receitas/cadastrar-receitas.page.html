@@ -1,33 +1,37 @@
 <ion-header>
-  <ion-toolbar color=success>
+  <ion-toolbar class="ion-padding-end" color=success>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-avatar slot="start">
+      <img src="assets/icon/ensaio.jpg">
+    </ion-avatar>
     <ion-title text-center color=dark>
-      <h3>
-        <img width=40 src="assets/icon/cerveja.jpg">
-        Cadastrar Receita
-        <img width=40 src="assets/icon/cerveja.jpg"></h3>
-    </ion-title> 
+      <h3>Receitas</h3>
+    </ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/icon/ensaio.jpg">
+    </ion-avatar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-card padding>
-      <ion-card-title text-center>
-        Cadastrar Receita
-      </ion-card-title>
-      <ion-list>
-        <ion-item>
-          <ion-label>Tipo:</ion-label>
-          <ion-input type="text" [(ngModel)]="tipo"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Lúpulo:</ion-label>
-          <ion-input type="text" [(ngModel)]="texto"></ion-input>
-        </ion-item>
-      </ion-list>
-      <ion-button type="submit">Cadastrar</ion-button>
-      <br>
-    </ion-card>
-  </ion-content>
+  <ion-card padding>
+    <ion-card-title text-center>
+      Cadastrar Receita
+    </ion-card-title>
+    <ion-list>
+      <ion-item>
+        <ion-label>Tipo:</ion-label>
+        <ion-input type="text" [(ngModel)]="tipo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Lúpulo:</ion-label>
+        <ion-input type="text" [(ngModel)]="texto"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button ((click)="onSubmit()") >Cadastrar</ion-button>
+    <ion-button routerLink="/receitas-list">Listar</ion-button>
+    <br>
+  </ion-card>
+</ion-content>

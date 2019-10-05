@@ -27,6 +27,16 @@
   </ion-item>
 
   <ion-item>
+      <ion-label>Alfa-Ácido</ion-label>
+      <ion-input [(ngModel)]="data.alpha" placeholder="Digite o alfa-ácido"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Beta-Ácido</ion-label>
+      <ion-input [(ngModel)]="data.beta" placeholder="Digite o beta-ácido"></ion-input>
+    </ion-item>
+
+  <ion-item>
     <ion-label>Tipo</ion-label>
     <ion-select [(ngModel)]="data.tipo" placeholder="Selecione o tipo">
       <ion-select-option value="Amargor">Amargor</ion-select-option>
@@ -58,15 +68,7 @@
 
   </ion-radio-group>
 
-  <ion-item>
-    <ion-label>Alfa-Ácido</ion-label>
-    <ion-input [(ngModel)]="data.alpha" placeholder="Digite o alfa-ácido"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Beta-Ácido</ion-label>
-    <ion-input [(ngModel)]="data.beta" placeholder="Digite o beta-ácido"></ion-input>
-  </ion-item>
+  
 
   <ion-button  (click)="update()">
     Atualizar

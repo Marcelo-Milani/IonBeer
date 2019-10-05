@@ -38,11 +38,29 @@
     {
       "pais": "irã",
       "nome": "lupulo200",
-      "alpha": 10,
-      "beta": 0.5,
+      "alpha": "10",
+      "beta": "0.5",
       "tipo": "Ambos",
-      "formato": "extrato",
+      "formato": "Flor",
       "id": 6
+    },
+    {
+      "nome": "Lupulo 101",
+      "pais": "brasil",
+      "alpha": "10-11",
+      "beta": "11-11",
+      "tipo": "Aroma",
+      "formato": "Flor",
+      "id": 7
+    },
+    {
+      "nome": "dfbdfzb",
+      "pais": "vdsvasdgv",
+      "alpha": "10-12",
+      "beta": "20-30",
+      "tipo": "Ambos",
+      "formato": "Pellet",
+      "id": 8
     }
   ],
   "maltes": [
@@ -99,9 +117,9 @@
     },
     {
       "nome": "levedura",
-      "atenuacao": 6,
-      "tempMin": 67,
-      "tempMax": 80,
+      "atenuacao": "6",
+      "tempMin": "67",
+      "tempMax": "85",
       "id": 2
     },
     {
@@ -112,10 +130,11 @@
       "id": 3
     },
     {
-      "id": 4
-    },
-    {
-      "id": 5
+      "id": 5,
+      "nome": "Levedura 33",
+      "atenuacao": "50",
+      "tempMin": "65",
+      "tempMax": "80"
     }
   ],
   "aguas": [
@@ -152,7 +171,7 @@
     },
     {
       "tipo": "pale ale",
-      "og": 1040,
+      "og": 10,
       "fg": 1400,
       "ibu": 2,
       "srm": 12,
@@ -160,13 +179,13 @@
       "id": 2
     },
     {
-      "tipo": "Pilsen",
-      "og": null,
-      "fg": 543,
-      "ibu": 868,
-      "srm": 67868,
-      "abv": 868,
-      "id": 4
+      "tipo": "Pilsener",
+      "og": 6543,
+      "fg": 1456,
+      "ibu": 258,
+      "srm": 369,
+      "abv": 123,
+      "id": 3
     }
   ]
 }
