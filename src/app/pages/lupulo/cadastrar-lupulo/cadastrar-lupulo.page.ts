@@ -25,10 +25,8 @@ export class CadastrarLupuloPage implements OnInit {
   ngOnInit() {
   }
  
-  submitForm() {
-    console.log("passei no submit form")
+ async submitForm() {
     this.lupService.createItem(this.data).subscribe((response) => {
-     console.log(response);
       this.presentToast();
       this.router.navigate(['lupulo-list']);
     });

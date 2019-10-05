@@ -11,7 +11,8 @@ export class LupuloListPage implements OnInit {
 
   lupulosData: any;
 
-  constructor(public lupService: LupuloService, public toastController: ToastController) {
+  constructor(public lupService: LupuloService, 
+    public toastController: ToastController) {
     this.lupulosData = [];
   }
 
@@ -19,10 +20,10 @@ export class LupuloListPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.getAllLupulos(); console.log("ooo");
+    this.getAllLupulos();
   }
 
-  getAllLupulos() {
+ async getAllLupulos() {
     //Get saved list of students
     this.lupService.getList().subscribe(response => {
     console.log(response);

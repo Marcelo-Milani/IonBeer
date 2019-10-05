@@ -35,44 +35,44 @@ export class AppComponent {
           icon: "home"
         },
         {
-          title: 'Cadastar Lupulo',
+          title: 'Lupulo',
           url: '/cadastrar-lupulo',
-          icon: "add-circle"
+          icon: "ios-rose"
         },
         {
-          title: 'Cadastrar Malte',
+          title: 'Malte',
           url: '/cadastrar-malte',
-          icon: "add-circle"
+          icon: "md-keypad"
         },
         {
-          title: 'Cadastrar Levedura',
+          title: 'Levedura',
           url: '/cadastrar-levedura',
-          icon: "add-circle"
+          icon: "md-color-filter"
         },
         {
-          title: 'Cadastrar Água',
+          title: 'Água',
           url: '/cadastrar-agua',
-          icon: "add-circle"
+          icon: "ios-water"
         },
         {
-          title: 'Cadastrar Receitas',
+          title: 'Receitas',
           url: '/cadastrar-receitas',
-          icon: "add-circle"
+          icon: "ios-flask"
         },
         {
-          title: 'Cadastrar Tipos de Cerveja',
+          title: 'Tipos de Cerveja',
           url: '/cadastrar-tipo-cerveja',
-          icon: "add-circle"
+          icon: "ios-beer"
         },
         {
           title: 'Listar Tipos de Cerveja',
-          url: '/tipo-cerveja-details',
-          icon: "book"
+          url: '/tipo-cerveja-list',
+          icon: "ios-book"
         },
         {
           title: 'Visualizar Receitas',
           url: '/receitas-details',
-          icon: "book"
+          icon: "ios-book"
         }
       ];
   }

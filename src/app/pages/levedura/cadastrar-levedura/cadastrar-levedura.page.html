@@ -1,14 +1,17 @@
 <ion-header>
-  <ion-toolbar color=success>
+  <ion-toolbar class="ion-padding-end" color=success>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-avatar slot="start">
+      <img src="assets/icon/levedura.jpg">
+    </ion-avatar>
     <ion-title text-center color=dark>
-      <h1>
-        <img width=40 src="assets/icon/cerveja.jpg">
-        Levedura
-        <img width=40 src="assets/icon/cerveja.jpg"></h1>
+      <h3>Levedura</h3>
     </ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/icon/levedura.jpg">
+    </ion-avatar>
   </ion-toolbar>
 </ion-header>
 
@@ -37,6 +40,7 @@
 
     </ion-list>
     <ion-button type="submit" (click)="submitForm()">Cadastrar</ion-button>
+    <ion-button routerLink="/levedura-list">Listar</ion-button>
     <br>
   </ion-card>
 </ion-content>

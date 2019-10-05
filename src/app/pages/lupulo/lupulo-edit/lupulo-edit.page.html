@@ -1,18 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>lupulo-edit</ion-title>
+  <ion-toolbar class="ion-padding-end" color=success>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-avatar slot="start">
+      <img src="assets/icon/lupulo.jpg">
+    </ion-avatar>
+    <ion-title text-center color=dark>
+      <h3>Editar Lúpulo</h3>
+    </ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/icon/lupulo.jpg">
+    </ion-avatar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <ion-item>
     <ion-label>Nome</ion-label>
-    <ion-input [(ngModel)]="data.nome" placeholder="Digite o nome"></ion-input>
+    <ion-input [(ngModel)]="data.nome" placeholder="Digite o nome" clear-input="true" text-capitalize></ion-input>
   </ion-item>
- 
+
   <ion-item>
     <ion-label>País</ion-label>
-    <ion-input [(ngModel)]="data.pais" placeholder="Digite o país"></ion-input>
+    <ion-input [(ngModel)]="data.pais" placeholder="Digite o país" clear-input="true" text-capitalize></ion-input>
   </ion-item>
 
   <ion-item>
@@ -25,7 +36,7 @@
   </ion-item>
 
   <ion-radio-group [(ngModel)]="data.formato">
-  
+
     <ion-list-header>
       <ion-label>Formato</ion-label>
     </ion-list-header>
@@ -40,8 +51,13 @@
       <ion-radio slot="start" value="Flor"></ion-radio>
     </ion-item>
 
+    <ion-item>
+      <ion-label>Extrato</ion-label>
+      <ion-radio slot="start" value="extrato"></ion-radio>
+    </ion-item>
+
   </ion-radio-group>
- 
+
   <ion-item>
     <ion-label>Alfa-Ácido</ion-label>
     <ion-input [(ngModel)]="data.alpha" placeholder="Digite o alfa-ácido"></ion-input>
@@ -52,10 +68,10 @@
     <ion-input [(ngModel)]="data.beta" placeholder="Digite o beta-ácido"></ion-input>
   </ion-item>
 
-  <ion-button expand="full" (click)="update()">
+  <ion-button  (click)="update()">
     Atualizar
   </ion-button>
-  <ion-button expand="full" [routerLink]="[ '/lupulo-list']"  color="danger" >
+  <ion-button  [routerLink]="[ '/lupulo-list']" color="danger">
     Cancelar
   </ion-button>
 </ion-content>

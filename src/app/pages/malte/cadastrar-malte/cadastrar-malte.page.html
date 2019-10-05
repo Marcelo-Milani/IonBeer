@@ -1,15 +1,18 @@
 <ion-header>
-  <ion-toolbar color=success>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title text-center color=dark>
-      <h1>
-        <img width=40 src="assets/icon/cerveja.jpg">
-        Malte
-        <img width=40 src="assets/icon/cerveja.jpg"></h1>
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar class="ion-padding-end" color=success>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-avatar slot="start">
+          <img src="assets/icon/malte.jpg">
+        </ion-avatar>
+        <ion-title text-center color=dark>
+          <h3>Malte</h3>
+        </ion-title>
+        <ion-avatar slot="end">
+          <img src="assets/icon/malte.jpg">
+        </ion-avatar>
+      </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
@@ -31,7 +34,8 @@
         <ion-input type="number" [(ngModel)]="data.potencial" clear-input placeholder="5 - 100"></ion-input>
       </ion-item>
     </ion-list>
-    <ion-button  expand="full" (click)="submitForm()" [routerLink]="['/malte-list']">Cadastrar</ion-button>
+    <ion-button (click)="submitForm()" [routerLink]="['/malte-list']">Cadastrar</ion-button>
+    <ion-button routerLink="/malte-list">Listar</ion-button>
     <br>
   </ion-card>
 </ion-content>

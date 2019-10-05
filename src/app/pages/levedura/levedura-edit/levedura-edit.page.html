@@ -1,35 +1,43 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>Editar Levedura</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content class="ion-padding">
-    <ion-item>
-      <ion-label>Nome</ion-label>
-      <ion-input [(ngModel)]="data.nome" placeholder="Digite o nome" clear-input text-capitalize></ion-input>
-    </ion-item>
-   
-    <ion-item>
-      <ion-label>Atenuação %: </ion-label>
-      <ion-input [(ngModel)]="data.atenuacao" placeholder="Insira percentual de atenuação" clear-input ></ion-input>
-    </ion-item>
-   
-    <ion-item>
-      <ion-label>Temperatura Mínima ºC: </ion-label>
-      <ion-input [(ngModel)]="data.tempMin" placeholder="Digite a temperatura mínima" clear-input></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>Temperatura Máxima ºC: </ion-label>
-      <ion-input [(ngModel)]="data.tempMax" placeholder="Digite a temperatura máxima" clear-input></ion-input>
-    </ion-item>
-  
-    <ion-button expand="full" (click)="update()">
-      Atualizar
-    </ion-button>
-    <ion-button  [routerLink]="[ '/levedura-list']"  color="danger" >
-      Cancelar
-    </ion-button>
-  </ion-content>
-  
+  <ion-toolbar class="ion-padding-end" color=success>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-avatar slot="start">
+      <img src="assets/icon/levedura.jpg">
+    </ion-avatar>
+    <ion-title text-center color=dark>
+      <h3>Editar Levedura</h3>
+    </ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/icon/levedura.jpg">
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="data.nome" placeholder="Digite o nome" clear-input text-capitalize></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Atenuação %: </ion-label>
+    <ion-input [(ngModel)]="data.atenuacao" placeholder="Insira percentual de atenuação" clear-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Temperatura Mínima ºC: </ion-label>
+    <ion-input [(ngModel)]="data.tempMin" placeholder="Digite a temperatura mínima" clear-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Temperatura Máxima ºC: </ion-label>
+    <ion-input [(ngModel)]="data.tempMax" placeholder="Digite a temperatura máxima" clear-input></ion-input>
+  </ion-item>
+
+  <ion-button  (click)="update()">Atualizar</ion-button>
+  <ion-button [routerLink]="[ '/levedura-list']" color="danger">
+    Cancelar
+  </ion-button>
+</ion-content>

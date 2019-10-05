@@ -1,15 +1,17 @@
 <ion-header>
-  <ion-toolbar color=success>
+  <ion-toolbar class="ion-padding-end" color=success>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-avatar slot="start">
+      <img src="assets/icon/lupulo.jpg">
+    </ion-avatar>
     <ion-title text-center color=dark>
-      <h1>
-        <img width=40 src="assets/icon/cerveja.jpg">
-        Lúpulo
-        <img width=40 src="assets/icon/cerveja.jpg"></h1>
+      <h3>Lúpulo</h3>
     </ion-title>
-
+    <ion-avatar slot="end">
+      <img src="assets/icon/lupulo.jpg">
+    </ion-avatar>
   </ion-toolbar>
 </ion-header>
 
@@ -25,7 +27,7 @@
       </ion-item>
       <ion-item>
         <ion-label>País</ion-label>
-        <ion-input [(ngModel)]="data.pais" placeholder="Digite o país" clear-input="true" text-capitalize></ion-input>
+        <ion-input [(ngModel)]="data.pais" placeholder="País de origem" clear-input="true" text-capitalize></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Alpha %:</ion-label>
@@ -60,7 +62,8 @@
         </ion-radio-group>
       </ion-item>
     </ion-list>
-    <ion-button  expand="full" (click)="submitForm()">Cadastrar</ion-button>
+    <ion-button (click)="submitForm()">Cadastrar</ion-button>
+    <ion-button routerLink="/lupulo-list">Listar</ion-button>
     <br>
   </ion-card>
 </ion-content>
