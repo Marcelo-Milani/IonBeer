@@ -22,15 +22,15 @@
     </ion-card-title>
     <ion-list>
       <ion-item>
-        <ion-label>Tipo:</ion-label>
-        <ion-input type="text" [(ngModel)]="tipo"></ion-input>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" [(ngModel)]="data.nome"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Lúpulo:</ion-label>
-        <ion-input type="text" [(ngModel)]="texto"></ion-input>
+        <ion-label>Receita:</ion-label>
+        <ion-input type="text" [(ngModel)]="data.receita"></ion-input>
       </ion-item>
     </ion-list>
-    <ion-button ((click)="onSubmit()") >Cadastrar</ion-button>
+    <ion-button ((click)="submitForm()") >Cadastrar</ion-button>
     <ion-button routerLink="/receitas-list">Listar</ion-button>
     <br>
   </ion-card>

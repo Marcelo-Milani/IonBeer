@@ -187,5 +187,12 @@
       "abv": 123,
       "id": 3
     }
+  ],
+  "receitas": [
+    {
+      "id": 1,
+      "nome": "nome",
+      "receita": ""
+    }
   ]
 }
