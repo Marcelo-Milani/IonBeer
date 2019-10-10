@@ -162,10 +162,10 @@
   "cervejas": [
     {
       "id": 1,
-      "tipo": "nome",
+      "tipo": "Waissen",
       "og": 1050,
       "fg": 1002,
-      "ibu": 123,
+      "ibu": 1234,
       "srm": 234,
       "abv": 4.85
     },
@@ -186,6 +186,15 @@
       "srm": 369,
       "abv": 123,
       "id": 3
+    },
+    {
+      "tipo": "Lager Ale",
+      "og": 1044,
+      "fg": 1500,
+      "ibu": 245,
+      "srm": 214,
+      "abv": 5,
+      "id": 4
     }
   ],
   "receitas": [
@@ -193,6 +202,44 @@
       "id": 1,
       "nome": "nome",
       "receita": ""
+    },
+    {
+      "nome": "Pilsem",
+      "receita": "adicinar fdlgnknglkh vlhfvblkbvlçkzdjfgvçkzdjfgvkdfjgvç",
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "nome": "40",
+      "receita": "hmcghg",
+      "id": 4
+    },
+    {
+      "primeiro": "Moer os grãos",
+      "segundo": "1º aquecer a água a uma temperatura de 68ºC. 2º kdjbçsdbhsb",
+      "terceiro": "Utilizar água previamente aquecida a 68º para fazer a lavagem do mosto.",
+      "quarto": "Ferver o mosto  a uma temperatura de 70 ºC durante 30 minutos. Depois ir para segunda rampa e aquecer ate 80 ºC durante 40 minutos",
+      "quinto": "Fazer movimentos circulares durante 2 minutos.",
+      "sexto": "O resfriamento pode ser feito atraves de serpentina.",
+      "setimo": "deixar fermentar por 7 dias",
+      "oitavo": "Maturação por 10 dias",
+      "nono": "Carbonatação atraves de solução feita com açocar e verfida com agua",
+      "id": 5
+    },
+    {
+      "tipo": "Waissen",
+      "primeiro": "j.vhklvh",
+      "segundo": "h,mgh j,m",
+      "terceiro": "mvnvbn",
+      "quarto": "vcnxcvnvcb",
+      "quinto": "zcvbzcvb",
+      "sexto": "zxbxvbx",
+      "setimo": "bzxbxcb",
+      "oitavo": "xcbzbzxc",
+      "nono": "xbzfbzfdb",
+      "id": 6
     }
   ]
 }

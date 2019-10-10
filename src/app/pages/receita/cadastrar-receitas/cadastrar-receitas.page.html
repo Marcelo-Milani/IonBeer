@@ -20,18 +20,67 @@
     <ion-card-title text-center>
       Cadastrar Receita
     </ion-card-title>
-    <ion-list>
-      <ion-item>
-        <ion-label>Nome:</ion-label>
-        <ion-input type="text" [(ngModel)]="data.nome"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Receita:</ion-label>
-        <ion-input type="text" [(ngModel)]="data.receita"></ion-input>
-      </ion-item>
-    </ion-list>
+
+    <ion-item>
+      <ion-label>Tipo de Cerveja:</ion-label>
+      <ion-select interface="popover" [(ngModel)]="data.tipo" placeholder="Selecione o tipo de cerveja" (ionChange)="selectTipo($event)" >
+        <ion-item *ngFor="let item of cervejasData">
+          <ion-select-option>{{ item.tipo }}</ion-select-option>
+        </ion-item>
+      </ion-select>
+    </ion-item>
+
+    <ion-label>1º Passo: Moagem</ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.primeiro"> </ion-input>
+    </ion-item>
+
+    <ion-label>2º Passo: Brassagem</ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.segundo"> </ion-input>
+    </ion-item>
+
+    <ion-label>3º Passo: Lavagem</ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.terceiro"> </ion-input>
+    </ion-item>
+
+    <ion-label>4º Passo: Fervura</ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.quarto"> </ion-input>
+    </ion-item>
+
+    <ion-label>5º Passo: Whirpool</ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.quinto"> </ion-input>
+    </ion-item>
+
+    <ion-label>6º Passo: Resfriamento</ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.sexto"> </ion-input>
+    </ion-item>
+
+    <ion-label>7º Passo: Fermentação</ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.setimo"></ion-input>
+    </ion-item>
+
+    <ion-label>8º Passo: Maturação</ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.oitavo"> </ion-input>
+    </ion-item>
+
+    <ion-label>9º Passo: Carbonatação </ion-label>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="data.nono"></ion-input>
+    </ion-item>
+
+
     <ion-button (click)="submitForm()">Cadastrar</ion-button>
     <ion-button routerLink="/receitas-list">Listar</ion-button>
     <br>
   </ion-card>
 </ion-content>
+
+<!-- <ion-select-option routerLink='/tipo-cerveja-list/{{item.id}}'>
+        </ion-select-option> -->

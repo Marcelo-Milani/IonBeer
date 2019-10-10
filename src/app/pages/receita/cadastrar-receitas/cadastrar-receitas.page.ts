@@ -1,3 +1,5 @@
+import { CervejaService } from './../../../services/cerveja.service';
+import { Cerveja } from './../../../models/cerveja';
 import { Component, OnInit } from '@angular/core';
 import { Receita } from 'src/app/models/receita';
 import { ReceitaService } from 'src/app/services/receita.service';
@@ -12,33 +14,57 @@ import { ToastController } from '@ionic/angular';
 export class CadastrarReceitasPage implements OnInit {
 
   data: Receita;
+  model: Cerveja;
+  cervejasData: any;
+  tipo: any;
 
   constructor(
     public recService: ReceitaService,
+    public cevaService: CervejaService,
     public router: Router,
-    public toastController: ToastController ) {
+    public toastController: ToastController) {
     this.data = new Receita();
+    this.model = new Cerveja();
+    this.cervejasData = [];
   }
 
-  ngOnInit() {
-  }
 
-  submitForm() {
-    console.log("passei no submit levedura")
-    this.recService.createItem(this.data).subscribe((response) => {
-      console.log(response);
-      this.presentToast();
-      this.router.navigate(['receitas-list']);
-    });
+ngOnInit() {
+}
+ionViewWillEnter() {
+  this.getAllCervejas();
+}
 
-  }
+selectTipo(event){
+  this.tipo = event.detail.value;
+  console.log(event);
+  console.log(this.tipo);
+}
 
-  async presentToast() {
-    const toast = await this.toastController.create({
-      message: 'Levedura cadastrada com sucesso!',
-      duration: 3000
-    });
-    toast.present();
-  }
+submitForm() {
+  console.log("passei no submit receita")
+  this.recService.createItem(this.data).subscribe((response) => {
+    console.log(response);
+    this.presentToast();
+    this.router.navigate(['receitas-list']);
+  });
+
+}
+
+async getAllCervejas() {
+  //Get saved list of students
+  this.cevaService.getList().subscribe(response => {
+    console.log(response);
+    this.cervejasData = response;
+  })
+}
+
+async presentToast() {
+  const toast = await this.toastController.create({
+    message: 'Receita cadastrada com sucesso!',
+    duration: 3000
+  });
+  toast.present();
+}
 
 }
