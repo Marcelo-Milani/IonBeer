@@ -5,7 +5,6 @@ const routes: Routes = [
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)},
-  { path: 'receitas', loadChildren: './pages/receita/receitas/receitas.module#ReceitasPageModule' },
   { path: 'cadastrar-lupulo', loadChildren: './pages/lupulo/cadastrar-lupulo/cadastrar-lupulo.module#CadastrarLupuloPageModule' },
   { path: 'lupulo-list', loadChildren: './pages/lupulo/lupulo-list/lupulo-list.module#LupuloListPageModule' },
   { path: 'lupulo-edit/:id', loadChildren: './pages/lupulo/lupulo-edit/lupulo-edit.module#LupuloEditPageModule' },
@@ -32,6 +31,7 @@ const routes: Routes = [
   { path: 'tipo-cerveja-details', loadChildren: './pages/tipo-cerveja/tipo-cerveja-details/tipo-cerveja-details.module#TipoCervejaDetailsPageModule' },
   { path: 'tipo-cerveja-list', loadChildren: './pages/tipo-cerveja/tipo-cerveja-list/tipo-cerveja-list.module#TipoCervejaListPageModule' },
   { path: 'tipo-cerveja-edit/:id', loadChildren: './pages/tipo-cerveja/tipo-cerveja-edit/tipo-cerveja-edit.module#TipoCervejaEditPageModule' },
+ 
 
 ];
 

@@ -9,10 +9,27 @@ import { CadastrarReceitasPage } from './cadastrar-receitas.page';
 
 const routes: Routes = [
   {
+    path: 'etapas',
+    component: CadastrarReceitasPage,
+    children: [
+      {
+        path: 'etapa1',
+        loadChildren: '../etapa1/etapa1.module#Etapa1PageModule'
+      },
+      {
+        path: 'etapa2',
+        loadChildren: '../etapa2/etapa2.module#Etapa2PageModule'
+      }
+    ]
+  },
+  {
     path: '',
-    component: CadastrarReceitasPage
+    redirectTo: 'etapas/etapa1',
+    pathMatch: 'full'
   }
+  
 ];
+
 
 @NgModule({
   imports: [

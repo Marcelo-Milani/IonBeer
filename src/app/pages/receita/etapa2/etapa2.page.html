@@ -1,0 +1,117 @@
+<ion-content padding>
+  <br><br>
+  <h3>Cadastrar Receita</h3>
+  <!-- Agua -->
+  <form [formGroup]="itensForm" (ngSubmit)="onSubmit()">
+    <ion-label><strong>Água</strong></ion-label>
+    <ng-container *ngFor="let aguaFormGroup of itensForm.controls.aguas.controls;let i= index">
+      <div [formGroup]="aguaFormGroup">
+        <ion-item>
+            <ion-label>Origem:</ion-label>
+            <ion-select placeholder="Selecione ..." formControlName="id">                
+                <ion-select-option *ngFor="let item of aguaData" [value]="item.id">{{ item.origem }}</ion-select-option>                
+            </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>Qtd(L):</ion-label>
+          <ion-input type="number" formControlName="quantidade" clear-input="true" text-capitalize></ion-input>
+          <ion-label>Uso:</ion-label>
+          <ion-select formControlName="uso">
+            <ion-select-option value="Brassagem">Brassagem</ion-select-option>
+            <ion-select-option value="Lavagem">Lavagem</ion-select-option>
+          </ion-select>
+          <ion-icon (click)="removeAgua(i)" name="close-circle"></ion-icon>
+        </ion-item>
+      </div>
+    </ng-container>
+    <ion-button expand="block" fill="outline" (click)="addAgua()">
+        <ion-icon name="add"></ion-icon>Adicionar água
+    </ion-button>
+
+    <!-- Malte -->
+    <ion-label><strong>Malte</strong></ion-label>
+    <ng-container *ngFor="let malteFormGroup of itensForm.controls.maltes.controls; let i= index">
+      <div [formGroup]="malteFormGroup">
+          <ion-item>
+              <ion-label>Nome:</ion-label>
+              <ion-select placeholder="Selecione ..." formControlName="id">                
+                  <ion-select-option *ngFor="let item of malteData" [value]="item.id">{{ item.nome }}</ion-select-option>                
+              </ion-select>
+          </ion-item>
+        <ion-item>
+          <ion-label>Qtd(g):</ion-label>
+          <ion-input type="number" formControlName="quantidade"  clear-input="true" text-capitalize></ion-input>
+          <ion-icon (click)="removeMalte(i)" name="close-circle"></ion-icon>
+        </ion-item>
+      </div>
+    </ng-container>
+    <ion-button expand="block" fill="outline" (click)="addMalte()">
+        <ion-icon name="add"></ion-icon>Adicionar malte
+      </ion-button>
+      
+      <!-- Lúpulo -->
+      <ion-label><strong>Lúpulo</strong></ion-label>
+      <ng-container *ngFor="let lupuloFormGroup of itensForm.controls.lupulos.controls; let i= index">
+        <div [formGroup]="lupuloFormGroup">
+            <ion-item>
+              <ion-label>Nome:</ion-label>
+              <ion-select placeholder="Selecione ..." formControlName="id">                
+                  <ion-select-option *ngFor="let item of lupuloData" [value]="item.id">{{ item.nome }}</ion-select-option>                
+              </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>Qtd(g):</ion-label>
+            <ion-input type="number" formControlName="quantidade" clear-input="true" text-capitalize></ion-input>
+            <ion-label>Uso:</ion-label>
+            <ion-select formControlName="uso" >
+              <ion-select-option value="Fervura">Fervura</ion-select-option>
+              <ion-select-option value="Dry Hop">Dry Hop</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+              <ion-label>Dur.(min):</ion-label>
+              <ion-input type="number" formControlName="tempo" clear-input="true" text-capitalize></ion-input>
+              <ion-label>Temp.(°C):</ion-label>
+              <ion-input type="number" formControlName="temperatura" clear-input="true" text-capitalize></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label>Alfa(%):</ion-label>
+              <ion-input type="number" formControlName="alfa" clear-input="true" text-capitalize></ion-input>
+              <ion-icon (click)="removeLupulo(i)" name="close-circle"></ion-icon>
+          </ion-item>
+        </div>
+      </ng-container>
+      <ion-button expand="block" fill="outline" (click)="addLupulo()">
+          <ion-icon name="add"></ion-icon>Adicionar lúpulo
+        </ion-button>
+        
+
+    <!-- Leveduras -->
+    <ion-label><strong>Levedura</strong></ion-label>
+    <ng-container *ngFor="let leveduraFormGroup of itensForm.controls.leveduras.controls; let i= index">
+      <div [formGroup]="leveduraFormGroup">
+          <ion-item>
+              <ion-label>Nome:</ion-label>
+              <ion-select placeholder="Selecione ..." formControlName="id">                
+                  <ion-select-option *ngFor="let item of leveduraData" [value]="item.id">{{ item.nome }}</ion-select-option>                
+              </ion-select>
+          </ion-item>
+        <ion-item>
+          <ion-label>Qtd(g):</ion-label>
+          <ion-input type="number" formControlName="quantidade" clear-input="true" text-capitalize></ion-input>
+          <ion-icon (click)="removeLevedura(i)" name="close-circle"></ion-icon>
+        </ion-item>
+      </div>
+    </ng-container>
+    <ion-button expand="block" fill="outline" (click)="addLevedura()">
+        <ion-icon name="add"></ion-icon>Adicionar levedura
+      </ion-button>
+
+      <!--<ion-button expand="full" (click)="ver()">Ver</ion-button>-->
+
+  </form>
+
+  <ion-button (click)="submitForm()">Cadastrar</ion-button>
+    <ion-button routerLink="/receitas-list">Listar</ion-button>
+  
+</ion-content>

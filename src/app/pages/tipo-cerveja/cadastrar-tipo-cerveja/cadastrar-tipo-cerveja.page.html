@@ -16,40 +16,41 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card padding>
-    <ion-card-title text-center>
-      Cadastrar Cerveja
-    </ion-card-title>
+    
+    <h3 style="text-align: center">Cadastrar Cerveja</h3>
+    
     <ion-list>
       <ion-item>
-        <ion-label>Tipo:</ion-label>
-        <ion-input type="text" [(ngModel)]="data.tipo" clear-input text-capitalize></ion-input>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" [(ngModel)]="data.nome" clear-input text-capitalize></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>OG:</ion-label>
+        <ion-label>Descrição:</ion-label>
+        <ion-textarea rows="6" cols="20" [(ngModel)]="data.descricao" clear-input text-capitalize></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Densidade Original (OG):</ion-label>
         <ion-input type="number" [(ngModel)]="data.og" clear-input></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>FG: </ion-label>
+        <ion-label>Densidade Final (FG): </ion-label>
         <ion-input type="number" [(ngModel)]="data.fg" clear-input></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>IBU: </ion-label>
-        <ion-input type="number" [(ngModel)]="data.ibu" clear-input></ion-input>
+        <ion-label>Amargor: </ion-label>
+        <ion-input type="number" [(ngModel)]="data.ibu" clear-input></ion-input>IBUs
       </ion-item>
       <ion-item>
-        <ion-label>SRM: </ion-label>
-        <ion-input type="number" [(ngModel)]="data.srm" clear-input></ion-input>
+        <ion-label>Cor: </ion-label>
+        <ion-input type="number" [(ngModel)]="data.srm" clear-input></ion-input>SRM
       </ion-item>
       <ion-item>
-        <ion-label>ABV:</ion-label>
-        <ion-input type="number" [(ngModel)]="data.abv" clear-input></ion-input>
+        <ion-label>Gradação Alcoólica (ABV):</ion-label>
+        <ion-input type="number" [(ngModel)]="data.abv" clear-input></ion-input>%
       </ion-item>
 
     </ion-list>
-    <ion-button (click)="submitForm()">Cadastrar</ion-button>
-    <ion-button routerLink="/tipo-cerveja-list">Listar</ion-button>
-    <br>
-  </ion-card>
+    <ion-button (click)="submitForm()" >Cadastrar</ion-button>
+    <ion-button routerLink="/tipo-cerveja-list">Listar</ion-button>    
 </ion-content>

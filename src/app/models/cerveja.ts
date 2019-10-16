@@ -1,7 +1,8 @@
 export class Cerveja {
 
     id: number;
-    tipo: string;
+    nome: string;
+    descricao: string;
     og: number;
     fg: number;
     ibu: number;

@@ -71,7 +71,7 @@ export class AppComponent {
         },
         {
           title: 'Visualizar Receitas',
-          url: '/receitas-details',
+          url: '/receitas-list',
           icon: "ios-book"
         }
       ];

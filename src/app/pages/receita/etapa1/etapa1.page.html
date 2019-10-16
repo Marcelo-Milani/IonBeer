@@ -1,0 +1,58 @@
+<ion-content padding>
+    <br><br>
+    <h3>Cadastrar Receita</h3>
+    <ion-list>
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" [(ngModel)]="data.nome" clear-input="true" text-capitalize></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Descrição:</ion-label>
+          <ion-textarea rows="6" cols="20" [(ngModel)]="data.descricao" clear-input text-capitalize></ion-textarea>
+      </ion-item>
+      <ion-item>
+          <ion-label>Tipo:</ion-label>
+          <ion-select placeholder="Selecione ..." [(ngModel)]="data.tipo">                
+              <ion-select-option *ngFor="let item of cervejaData" [value]="item.id">{{ item.nome }}</ion-select-option>                
+          </ion-select>
+      </ion-item>      
+      <ion-item>
+          <ion-label>Cervejeiros:</ion-label>
+          <ion-input type="text" [(ngModel)]="data.cervejeiros" clear-input="true" text-capitalize></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Data Início:</ion-label>
+          <ion-input type="date" [(ngModel)]="data.data_inicio" clear-input="true" text-capitalize></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Data Fim:</ion-label>
+          <ion-input type="date" [(ngModel)]="data.data_fim" clear-input="true" text-capitalize></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>Volume:</ion-label>
+          <ion-input type="number" [(ngModel)]="data.volume" clear-input="true" text-capitalize></ion-input>L.
+      </ion-item>
+      <ion-item>
+          <ion-label>Densidade Original (OG):</ion-label>
+          <ion-input type="number" [(ngModel)]="data.og" clear-input></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Densidade Final (FG): </ion-label>
+          <ion-input type="number" [(ngModel)]="data.fg" clear-input></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Amargor: </ion-label>
+          <ion-input type="number" [(ngModel)]="data.ibu" clear-input></ion-input>IBUs
+        </ion-item>
+        <ion-item>
+          <ion-label>Cor: </ion-label>
+          <ion-input type="number" [(ngModel)]="data.srm" clear-input></ion-input>SRM
+        </ion-item>
+        <ion-item>
+          <ion-label>Gradação Alcoólica (ABV):</ion-label>
+          <ion-input type="number" [(ngModel)]="data.abv" clear-input></ion-input>%
+        </ion-item>
+    </ion-list>    
+   
+</ion-content>

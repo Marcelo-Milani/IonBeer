@@ -17,27 +17,31 @@
 
 <ion-content class="ion-padding">
   <ion-item>
-    <ion-label><strong>Tipo:</strong> {{data.tipo}}</ion-label>
+    <ion-label><strong>Nome:</strong> {{data.nome}}</ion-label>
   </ion-item>
 
   <ion-item>
-    <ion-label><strong>OG:</strong> {{data.og}}</ion-label>
+    <p><strong>Descrição:</strong> {{data.descricao}}</p>
   </ion-item>
 
   <ion-item>
-    <ion-label><strong>FG:</strong> {{data.fg}}</ion-label>
+    <ion-label><strong>Densidade Original (OG):</strong> {{data.og}}</ion-label>
   </ion-item>
 
   <ion-item>
-    <ion-label><strong>IBU:</strong> {{data.ibu}}</ion-label>
+    <ion-label><strong>Densidade Final (FG):</strong> {{data.fg}}</ion-label>
   </ion-item>
 
   <ion-item>
-    <ion-label><strong>SRM:</strong> {{data.srm}}</ion-label>
+    <ion-label><strong>Amargor:</strong> {{data.ibu}} IBUs</ion-label>
   </ion-item>
 
   <ion-item>
-    <ion-label><strong>ABV:</strong> {{data.abv}}</ion-label>
+    <ion-label><strong>Cor:</strong> {{data.srm}} SRM</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label><strong>Gradação Alcoólica (ABV):</strong> {{data.abv}} %</ion-label>
   </ion-item>
 
   <ion-button [routerLink]="[ '/tipo-cerveja-list']">

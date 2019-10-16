@@ -1,86 +1,33 @@
-<ion-header>
-  <ion-toolbar class="ion-padding-end" color=success>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-avatar slot="start">
-      <img src="assets/icon/ensaio.jpg">
-    </ion-avatar>
-    <ion-title text-center color=dark>
-      <h3>Receitas</h3>
-    </ion-title>
-    <ion-avatar slot="end">
-      <img src="assets/icon/ensaio.jpg">
-    </ion-avatar>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-  <ion-card padding>
-    <ion-card-title text-center>
-      Cadastrar Receita
-    </ion-card-title>
-
-    <ion-item>
-      <ion-label>Tipo de Cerveja:</ion-label>
-      <ion-select interface="popover" [(ngModel)]="data.tipo" placeholder="Selecione o tipo de cerveja" (ionChange)="selectTipo($event)" >
-        <ion-item *ngFor="let item of cervejasData">
-          <ion-select-option>{{ item.tipo }}</ion-select-option>
-        </ion-item>
-      </ion-select>
-    </ion-item>
-
-    <ion-label>1º Passo: Moagem</ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.primeiro"> </ion-input>
-    </ion-item>
-
-    <ion-label>2º Passo: Brassagem</ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.segundo"> </ion-input>
-    </ion-item>
-
-    <ion-label>3º Passo: Lavagem</ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.terceiro"> </ion-input>
-    </ion-item>
-
-    <ion-label>4º Passo: Fervura</ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.quarto"> </ion-input>
-    </ion-item>
-
-    <ion-label>5º Passo: Whirpool</ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.quinto"> </ion-input>
-    </ion-item>
-
-    <ion-label>6º Passo: Resfriamento</ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.sexto"> </ion-input>
-    </ion-item>
-
-    <ion-label>7º Passo: Fermentação</ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.setimo"></ion-input>
-    </ion-item>
-
-    <ion-label>8º Passo: Maturação</ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.oitavo"> </ion-input>
-    </ion-item>
-
-    <ion-label>9º Passo: Carbonatação </ion-label>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.nono"></ion-input>
-    </ion-item>
-
-
-    <ion-button (click)="submitForm()">Cadastrar</ion-button>
-    <ion-button routerLink="/receitas-list">Listar</ion-button>
-    <br>
-  </ion-card>
-</ion-content>
-
-<!-- <ion-select-option routerLink='/tipo-cerveja-list/{{item.id}}'>
-        </ion-select-option> -->
+<ion-header >
+    <ion-toolbar class="ion-padding-end" color=success>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-avatar slot="start">
+        <img src="assets/icon/cerveja.jpg">
+      </ion-avatar>
+      <ion-title text-center color=dark>
+        <h3>Cervejas</h3>
+      </ion-title>
+      <ion-avatar slot="end">
+        <img src="assets/icon/cerveja.jpg">
+      </ion-avatar>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-tabs>
+   
+    <ion-tab-bar slot="bottom">
+   
+      <ion-tab-button tab="etapa1">
+        <ion-icon name="information-circle-outline"></ion-icon>
+          <ion-label>Características</ion-label>
+      </ion-tab-button>
+   
+      <ion-tab-button tab="etapa2">
+        <ion-icon name="rose"></ion-icon>
+        <ion-label>Ingredientes</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+   
+  </ion-tabs>

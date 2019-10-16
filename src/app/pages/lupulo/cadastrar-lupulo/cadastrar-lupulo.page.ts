@@ -41,40 +41,4 @@ export class CadastrarLupuloPage implements OnInit {
     toast.present();
   }
 }
-  // data: Lupulo;
-  // lupulo: any = [];
-  // lupulos: any = [];
-
-
-
-  // ngOnInit() { }
-
-  // constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-
-  //   this.data = new Lupulo();
-
-  // }
-  // async cadastrar() {
-  //   if (this.data.nome!='' && this.data.alpha != undefined && this.data.beta != undefined) {
-  //     this.lupulo.push(this.data.nome);
-  //     this.lupulo.push(this.data.alpha);
-  //     this.lupulo.push(this.data.beta);
-  //     this.lupulo.push(this.data.tipo);
-  //     console.log(this.lupulo);
-  //     this.lupulos.push(this.lupulo);
-      
-  //     //alert(this.data.nome);
-
-  //   } else {
-  //     const alert = this.alertCtrl.create({
-  //       header: 'Aviso',
-  //       subHeader: 'Cadastro',
-  //       message: 'Preencha corretamente todos os dados! ',
-  //       buttons: ['Cancel', 'Ok']
-  //     });
-
-  //     (await alert).present();
-  //   }
-  // }
-
-
+  

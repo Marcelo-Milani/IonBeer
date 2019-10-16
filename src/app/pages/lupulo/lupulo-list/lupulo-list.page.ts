@@ -1,7 +1,7 @@
 import { LupuloService } from './../../../services/lupulo.service';
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-
+ 
 @Component({
   selector: 'app-lupulo-list',
   templateUrl: './lupulo-list.page.html',

@@ -139,107 +139,134 @@
   ],
   "aguas": [
     {
-      "id": 1,
       "origem": "Garibaldi",
       "ph": 5,
       "calcio": 7,
       "magnesio": 2,
       "sodio": 6,
       "sulfato": 2,
-      "bicarbonato": 2
+      "bicarbonato": 2,
+      "id": 1
     },
     {
-      "origem": "carlos barbosa",
+      "origem": "Carlos Barbosa",
       "ph": 5,
       "calcio": 9,
       "magnesio": 5,
       "sodio": 7,
       "sulfato": 9,
       "bicarbonato": 2,
-      "id": 3
+      "id": 2
     }
   ],
   "cervejas": [
     {
       "id": 1,
-      "tipo": "Waissen",
+      "nome": "Cream Ale",
+      "descricao": "Cream Ale é um estilo americano de cerveja que surgiu no final do século 19, como uma variação das populares Pilsners.",
       "og": 1050,
       "fg": 1002,
       "ibu": 1234,
       "srm": 234,
-      "abv": 4.85
+      "abv": 4.7
     },
     {
-      "tipo": "pale ale",
-      "og": 10,
-      "fg": 1400,
-      "ibu": 2,
-      "srm": 12,
-      "abv": 4,
-      "id": 2
-    },
-    {
-      "tipo": "Pilsener",
-      "og": 6543,
-      "fg": 1456,
-      "ibu": 258,
-      "srm": 369,
-      "abv": 123,
-      "id": 3
-    },
-    {
-      "tipo": "Lager Ale",
-      "og": 1044,
-      "fg": 1500,
-      "ibu": 245,
-      "srm": 214,
+      "nome": "American Double IPA",
+      "descricao": "Feita com os lúpulos Columbus, Amarillo, Cascade e Simcoe. Ela proprociona mais amargor e mais malte que uma IPA normal. Amarelo dourado, espuma branca de bolhas finas. ",
+      "og": 1.085,
+      "fg": 1.02,
+      "ibu": 85,
+      "srm": 19,
       "abv": 5,
-      "id": 4
+      "id": 2
     }
   ],
   "receitas": [
     {
-      "id": 1,
-      "nome": "nome",
-      "receita": ""
+      "nome": "Nova Beer",
+      "descricao": "yuyu",
+      "tipo": 1,
+      "cervejeiros": "caras",
+      "data_inicio": "2019-08-21",
+      "data_fim": "2019-10-22",
+      "volume": 30,
+      "og": 1090,
+      "fg": 1045,
+      "ibu": 78,
+      "srm": 65,
+      "abv": 7,
+      "aguas": [
+        {
+          "quantidade": 1,
+          "uso": "Brassagem"
+        }
+      ],
+      "maltes": [
+        {
+          "quantidade": 1
+        },
+        {
+          "quantidade": 2
+        }
+      ],
+      "lupulos": [
+        {
+          "quantidade": 1,
+          "uso": "Dry Hop",
+          "tempo": 2,
+          "temperatura": 22,
+          "alfa": 9
+        }
+      ],
+      "leveduras": [
+        {
+          "quantidade": 292
+        }
+      ],
+      "id": 1
     },
     {
-      "nome": "Pilsem",
-      "receita": "adicinar fdlgnknglkh vlhfvblkbvlçkzdjfgvçkzdjfgvkdfjgvç",
+      "nome": "Beer GHGH",
+      "descricao": "dsuyduy dsuyd suy",
+      "tipo": 1,
+      "cervejeiros": "caras",
+      "data_inicio": "2019-09-18",
+      "data_fim": "2019-10-22",
+      "volume": 28,
+      "og": 1090,
+      "fg": 1045,
+      "ibu": 78,
+      "srm": 65,
+      "abv": 7,
+      "aguas": [
+        {
+          "quantidade": 1,
+          "uso": "Brassagem"
+        }
+      ],
+      "maltes": [
+        {
+          "quantidade": 1
+        },
+        {
+          "quantidade": 2
+        }
+      ],
+      "lupulos": [
+        {
+          "quantidade": 1,
+          "uso": "Dry Hop",
+          "tempo": 2,
+          "temperatura": 22,
+          "alfa": 9
+        }
+      ],
+      "leveduras": [
+        {
+          "quantidade": 292
+        }
+      ],
       "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "nome": "40",
-      "receita": "hmcghg",
-      "id": 4
-    },
-    {
-      "primeiro": "Moer os grãos",
-      "segundo": "1º aquecer a água a uma temperatura de 68ºC. 2º kdjbçsdbhsb",
-      "terceiro": "Utilizar água previamente aquecida a 68º para fazer a lavagem do mosto.",
-      "quarto": "Ferver o mosto  a uma temperatura de 70 ºC durante 30 minutos. Depois ir para segunda rampa e aquecer ate 80 ºC durante 40 minutos",
-      "quinto": "Fazer movimentos circulares durante 2 minutos.",
-      "sexto": "O resfriamento pode ser feito atraves de serpentina.",
-      "setimo": "deixar fermentar por 7 dias",
-      "oitavo": "Maturação por 10 dias",
-      "nono": "Carbonatação atraves de solução feita com açocar e verfida com agua",
-      "id": 5
-    },
-    {
-      "tipo": "Waissen",
-      "primeiro": "j.vhklvh",
-      "segundo": "h,mgh j,m",
-      "terceiro": "mvnvbn",
-      "quarto": "vcnxcvnvcb",
-      "quinto": "zcvbzcvb",
-      "sexto": "zxbxvbx",
-      "setimo": "bzxbxcb",
-      "oitavo": "xcbzbzxc",
-      "nono": "xbzfbzfdb",
-      "id": 6
     }
   ]
 }
